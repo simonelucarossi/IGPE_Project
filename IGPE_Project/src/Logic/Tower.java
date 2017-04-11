@@ -1,5 +1,6 @@
 package Logic;
 
-public class Tower {
+public class Tower 
+{
 int n;
 }
