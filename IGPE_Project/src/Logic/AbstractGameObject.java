@@ -56,5 +56,11 @@ public abstract class AbstractGameObject implements IGameObject{
 			this.size = _size;
 			
 		}	
+		
+		@Override
+		public boolean collide(ICollidable c) {
+			
+			return false;
+		}	
 
 	}
