@@ -6,7 +6,7 @@ public class AbstractTower extends AbstractGameObject {
 		super(_position, _size);
 		// TODO Auto-generated constructor stub
 	}
-//
+//s
 	@Override
 	public boolean collide(ICollidable c) {
 		// TODO Auto-generated method stub
