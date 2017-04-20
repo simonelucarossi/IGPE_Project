@@ -1,6 +1,5 @@
 package Tower;
 
-import Logic.AbstractGameObjectDynamic;
 import Logic.Vector2d;
 
 public class AbstractTower extends AbstractGameObjectDynamic {

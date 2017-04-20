@@ -1,4 +1,8 @@
-package Logic;
+package Tower;
+
+import Logic.ICollidable;
+import Logic.IGameObjectDynamic;
+import Logic.Vector2d;
 
 public abstract class AbstractGameObjectDynamic implements IGameObjectDynamic{
 		
