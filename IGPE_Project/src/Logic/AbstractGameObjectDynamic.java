@@ -1,6 +1,6 @@
 package Logic;
 
-public abstract class AbstractGameObject implements IGameObject{
+public abstract class AbstractGameObjectDynamic implements IGameObjectDynamic{
 		
 		protected Vector2d position;
 		protected Vector2d size;
@@ -14,12 +14,12 @@ public abstract class AbstractGameObject implements IGameObject{
 			return s;
 		}
 		
-		public AbstractGameObject(Vector2d _position, Vector2d _size) {
+		public AbstractGameObjectDynamic(Vector2d _position, Vector2d _size) {
 			this.position = _position;
 			this.size = _size;
 		}
 		
-		@Override
+		
 		public void move(final double dt) {
 
 		}
@@ -35,6 +35,11 @@ public abstract class AbstractGameObject implements IGameObject{
 		}
 		
 		@Override
+		public Vector2d getSize() {
+			return size;
+		}
+		
+		@Override
 		public void setPosition(Vector2d pos) {
 			position = pos;
 			
@@ -45,18 +50,12 @@ public abstract class AbstractGameObject implements IGameObject{
 			this.velocity = _vel;
 			
 		}
-		
-		@Override
-		public Vector2d getSize() {
-			return size;
-		}
 
 		@Override
 		public void setSize(Vector2d _size) {
 			this.size = _size;
 			
 		}	
-		//sd
 		
 		@Override
 		public boolean collide(ICollidable c) {

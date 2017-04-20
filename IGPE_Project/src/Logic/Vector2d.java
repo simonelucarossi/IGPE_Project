@@ -6,13 +6,13 @@ public class Vector2d {
 	
 	    private  double x;
 	    private  double y;
-
 	    
 	    @Override
 	    public String toString() {
-	    String s= "["+x+" "+y+"]";
-	    return s;
+	    	String s= "["+x+" "+y+"]";
+	    	return s;
 	    }
+	    
 	    public Vector2d(double x, double y){
 	        this.x = x;
 	        this.y = y;
@@ -20,9 +20,9 @@ public class Vector2d {
 	    }
 
 	    public Vector2d approx(){
-	   
 	    	return new Vector2d(Math.rint(x), Math.rint(y));
 	    }
+	    
 	    public Vector2d minus(Vector2d s) {
 	        return new Vector2d(x - s.x, y - s.y);
 	    }
