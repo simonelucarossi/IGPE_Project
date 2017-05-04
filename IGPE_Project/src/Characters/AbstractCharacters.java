@@ -10,13 +10,19 @@ public abstract class AbstractCharacters implements IGameObjectDynamic{
 			protected Vector2d size;
 			protected Vector2d velocity 	= new Vector2d(0.0, 0.0);
 			
-			public String toString() {
+			/*	STAMPA POSIZIONE E VELOCITA' DEI PERSONAGGI
+			  
+			  	public String toString() {
 				String s ="[";
 				s+=" pos: "+position.toString();
 				s+=" vel: "+velocity.toString();
 				s+="]";
 				return s;
+			
 			}
+			*/
+			
+			//Simone è un grande
 			
 			public AbstractCharacters(Vector2d _position, Vector2d _size) {
 				this.position = _position;
