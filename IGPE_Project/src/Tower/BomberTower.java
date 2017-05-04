@@ -2,11 +2,11 @@ package Tower;
 
 import Logic.Vector2d;
 
-public class ArcherTower extends AbstractTower {
+public class BomberTower extends AbstractTower {
 
-	public ArcherTower(Vector2d _position) {
+	public BomberTower(Vector2d _position) {
 		super(_position);
-		attack = 10;
+		
 	}
 	
 	public void attackMod () {

@@ -8,17 +8,8 @@ public abstract class AbstractBullet implements IGameObjectDynamic{
 	public static Vector2d GRAVITY = new Vector2d(0, +28.81);
 	protected Vector2d position;
 	protected Vector2d size;
-	protected Vector2d velocity 	= new Vector2d(0.0, 0.0);	
+	protected Vector2d velocity 	= new Vector2d(0, 0);	
 	protected Vector2d force 		= GRAVITY;
-	
-	public String toString() {
-		String s ="[";
-		s+=" pos: "+position.toString();
-		s+=" vel: "+velocity.toString();
-		s+=" for: "+force.toString();
-		s+="]";
-		return s;
-	}
 	
 	public AbstractBullet(Vector2d _position, Vector2d _size) {
 		this.position = _position;

@@ -6,55 +6,46 @@ import Logic.Vector2d;
 
 public abstract class AbstractTower implements IGameObjectStatic{
 		
-		protected Vector2d position;
-		protected Vector2d size = new Vector2d(3.0, 3.0);
-		protected double attack = 0.0; 
-
-		public String toString() {
-			String s ="[";
-			s+=" pos: "+position.toString();
-			s+="]";
-			return s;
-		}
+		Vector2d position;
+		Vector2d size = new Vector2d(3, 3);
+		int attack; 
+		int level = 1, levelMax = 3;
 		
 		public AbstractTower(Vector2d _position) {
 			this.position = _position;
 		}
 			
+		public void upLevelTower() { 
+			if(!checkLevelMax()) { 
+					level++;
+					size.setX(size.getX()+2);
+					size.setY(size.getY()+2);
+					attack += attack/4;		
+			}
+		}
+		
+		public boolean checkLevelMax() { return level==levelMax; }
+		
 		public Vector2d getCentre() {
-			Vector2d posCentre = new Vector2d(position.getX() + size.getX(), position.getY() + size.getY()/2);
+			Vector2d posCentre = new Vector2d(position.getX() + size.getX()/2, position.getY() + size.getY()/2);
 			return posCentre;
 		}
 		
 		@Override
-		public Vector2d getPosition() {
-			return position;
-		}
+		public Vector2d getPosition() { return position; }
 		
 		@Override
-		public Vector2d getSize() {
-			return size;
-		}
+		public Vector2d getSize() { return size; }
 		
-			public double getAttack() {
-			return attack;
-		}
+		public int getAttack() { return attack; }
 			
 		@Override
-		public void setPosition(Vector2d pos) {
-			position = pos;
-			
-		}
+		public void setPosition(Vector2d pos) { this.position = pos; }
 
 		@Override
-		public void setSize(Vector2d _size) {
-			this.size = _size;
-			
-		}	
+		public void setSize(Vector2d _size) { this.size = _size; }	
 		
-		public void setAttack(double attack) {
-			this.attack = attack;
-		}
+		public void setAttack(int attack) { this.attack = attack; }
 		
 		@Override
 		public boolean collide(ICollidable c) {
